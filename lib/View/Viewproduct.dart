@@ -46,7 +46,6 @@ class _ViewproductState extends State<Viewproduct> {
               return Center(child: CircularProgressIndicator());
             }
             if (state is ViewdetalisblocLoaded) {
-              // If data is successfully loaded, show product details.
               final isviewiteams = state.viewProductModel;
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,7 +57,7 @@ class _ViewproductState extends State<Viewproduct> {
                     placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
                     errorWidget: (context, url, error) => const Icon(Icons.error),
                   ),
-                  // Padding for the content
+
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
@@ -105,10 +104,8 @@ class _ViewproductState extends State<Viewproduct> {
               );
             }
             if (state is ViewdetalisblocError) {
-              // Show an error message if the API request fails.
               return Center(child: Text(state.errormessage));
             }
-            // Return an empty widget if the state is unknown.
             return SizedBox();
           },
         ),

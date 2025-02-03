@@ -14,7 +14,6 @@ class ViewdetalisApi {
       Response response = await apiClient_1.invokeAPI(trendingpath, 'GET', null);
 
       if (response.statusCode == 200) {
-        // Convert response body into a JSON object
         var jsonResponse = jsonDecode(response.body);
         return ViewProductModel.fromJson(jsonResponse);
       } else {

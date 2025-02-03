@@ -42,10 +42,10 @@ class _HomepageState extends State<Homepage> {
             return GridView.builder(
               padding: const EdgeInsets.all(8.0),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, // Number of columns
+                crossAxisCount: 2,
                 crossAxisSpacing: 8.0,
                 mainAxisSpacing: 8.0,
-                childAspectRatio: 0.75, // Adjust the aspect ratio as needed
+                childAspectRatio: 0.75,
               ),
               itemCount:productList.length,
               itemBuilder: (context, index) {
